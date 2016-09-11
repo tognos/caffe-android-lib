@@ -25,3 +25,6 @@
 [submodule "leveldb"]
 	path = leveldb
 	url = https://github.com/google/leveldb.git
+[submodule "gflags"]
+	path = gflags
+	url = https://github.com/gflags/gflags.git

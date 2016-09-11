@@ -50,5 +50,6 @@ make clean
 make -j"${N_JOBS}"
 rm -rf "${INSTALL_DIR}"
 make install
+git clean -fd
 
 cd "${WD}"
