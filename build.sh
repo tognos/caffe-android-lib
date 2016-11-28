@@ -15,7 +15,9 @@ WD=$(readlink -f "$(dirname "$0")")
 cd "${WD}"
 
 export ANDROID_ABI="${ANDROID_ABI:-"arm64-v8a"}"
-export N_JOBS=${N_JOBS:-1}
+HOST_CPUS=$(cat /proc/cpuinfo | awk '/^processor/{print $3}' | tail -1)
+HOST_CPUS=$((${HOST_CPUS} + 2))
+export N_JOBS=${N_JOBS:-${HOST_CPUS}}
 
 if ! ./scripts/build_openblas.sh ; then
     echo "Failed to build OpenBLAS"
