@@ -12,7 +12,7 @@ Porting [caffe](https://github.com/BVLC/caffe) to android platform
 Tested with Android NDK r11c and cmake 3.3.2 on Ubuntu 14.04
 
 ```shell
-git clone --recursive https://github.com/sh1r0/caffe-android-lib.git
+git clone --recursive https://github.com/tognos/caffe-android-lib.git
 cd caffe-android-lib
 export ANDROID_ABI="arm64-v8a" # Optional, see the note below
 ./build.sh <path/to/ndk>
