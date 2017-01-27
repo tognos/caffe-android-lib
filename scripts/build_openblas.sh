@@ -71,6 +71,7 @@ fi
 
 make clean
 make -j${N_JOBS} \
+      NOFORTRAN=1 \
      CC="${CROSS_SUFFIX}gcc --sysroot=$SYSROOT" \
      FC="${CROSS_SUFFIX}gfortran --sysroot=$SYSROOT" \
      CROSS_SUFFIX=$CROSS_SUFFIX \
